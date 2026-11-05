@@ -1,0 +1,48 @@
+CSDF 1B ARENA — BULK QUESTION UPLOAD UPDATE
+
+WHAT THIS UPDATE ADDS
+- Bulk CSV question upload in the Admin Dashboard.
+- A downloadable CSV template.
+- Preview before upload.
+- Checks for missing fields, invalid correct answers, and duplicate questions.
+- Keeps uploaded questions in the same order as the CSV rows.
+- Existing single-question entry remains available.
+
+IMPORTANT: KEEP YOUR CURRENT config.js
+Your live Supabase URL and anon/public key are already in your GitHub config.js.
+Do not replace config.js with the placeholder copy from an older ZIP.
+Do not change your Supabase project or student accounts.
+
+STEP 1 — UPDATE SUPABASE
+1. Open the Supabase project used by CSDF 1B ARENA.
+2. Open SQL Editor and create a new query.
+3. Open supabase/bulk-question-import-migration.sql from this update.
+4. Copy all its SQL into the Supabase SQL Editor and click Run.
+
+STEP 2 — UPDATE GITHUB
+Upload/replace these files in the ROOT of your existing GitHub repository:
+- index.html
+- app.js
+- styles.css
+Upload the new folder/file:
+- supabase/bulk-question-import-migration.sql
+- question-template.csv
+You may also upload this instruction file if desired.
+Do NOT replace config.js, supabase/schema.sql, or netlify.toml.
+
+STEP 3 — WAIT FOR NETLIFY
+Netlify should redeploy automatically after the GitHub commit. Open:
+https://csdf-1b-arena.netlify.app
+Log in with your admin account and open Admin Dashboard.
+
+HOW TO UPLOAD QUESTIONS
+1. Download the CSV template from the Bulk Question Upload section.
+2. Open it in Excel or Google Sheets.
+3. Add one question per row. Keep the column headings unchanged.
+4. Save/export as CSV UTF-8 (.csv).
+5. In Admin Dashboard, choose the competition, select the CSV file, review the preview, and click Upload questions.
+
+REQUIRED CSV HEADERS
+question_text, option_a, option_b, option_c, option_d, correct_option
+Optional: explanation
+Correct option must be A, B, C, or D. Maximum 500 questions per upload.

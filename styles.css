@@ -8,3 +8,6 @@ button:disabled{opacity:.48;cursor:not-allowed}
 .topbar nav a:hover{color:#fff}
 .form input,.form textarea,.form select{min-height:43px}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+/* Bulk question importer */
+.bulk-panel{grid-column:1/-1}.bulk-help{padding:13px 15px;border:1px dashed var(--line);border-radius:10px;background:#ffffff06;color:var(--muted);font-size:12px;line-height:1.7}.bulk-help a{color:var(--cyan);font-weight:800}.bulk-preview{padding:13px 15px;border:1px solid var(--line);border-radius:10px;background:#0b1427;font-size:12px}.preview-row{padding:9px 0;border-bottom:1px solid var(--line)}.preview-row:last-of-type{border-bottom:0}.preview-row b,.preview-row small{display:block}.preview-row b{color:var(--text);margin-bottom:5px}.preview-row small{color:var(--muted);line-height:1.6}
